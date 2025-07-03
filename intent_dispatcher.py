@@ -1,10 +1,11 @@
 from modules import email_module
 from logger import log_system
 from voice import speak
+from modules.web_search import perform_web_search
 
 INTENT_HANDLERS = {
-    "send_email": email_module.handle_email
-    # Future: "set_reminder": reminder_module.handle_reminder
+    "send_email": email_module.handle_email,
+    "search_web": lambda entities: perform_web_search(entities.get("query", "")),
 }
 
 def dispatch(intent_data):

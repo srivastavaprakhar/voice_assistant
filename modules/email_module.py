@@ -3,7 +3,7 @@ from email.message import EmailMessage
 from logger import log_system
 import json
 import os
-from settings.config import SMTP_USER, SMTP_PASS, SMTP_SERVER, SMTP_PORT
+from settings.mail_config import SMTP_USER, SMTP_PASS, SMTP_SERVER, SMTP_PORT
 from voice import speak, ask_via_voice, ask_confirmation
 from classifier import format_email_with_llm
 
