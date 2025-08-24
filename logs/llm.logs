@@ -1,0 +1,450 @@
+[2025-07-28 12:06:23] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "open Word"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 12:08:56] Raw LLM output:  {
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": "Word"
+  }
+}
+[2025-07-28 12:16:50] [PARSE OK] {'action': 'click', 'target': "listitem: 'New'"}
+[2025-07-28 13:18:33] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "open Notepad"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 13:20:11] Raw LLM output:  {
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": "Notepad"
+  }
+}
+[2025-07-28 13:24:14] [ERROR] LLM parse failed: invalid syntax (<unknown>, line 2)
+Raw: {'id': 'cmpl-bc896a5e-8c1c-4caf-a81a-2e8ddb7934dc', 'object': 'text_completion', 'created': 1753689204, 'model': 'models/mistral-7b-instruct-v0.2.Q4_K_M.gguf', 'choices': [{'text': ' { "action": "click", "target": "button: \'Close\'" }\n{ "action": "click", "target": "button: \'Add New Tab\'" }', 'index': 0, 'logprobs': None, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 345, 'completion_tokens': 37, 'total_tokens': 382}}
+[2025-07-28 13:29:50] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "open Notepad"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 13:30:25] Raw LLM output:  {
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": "Notepad"
+  }
+}
+[2025-07-28 13:33:09] [PARSE OK] {'action': 'type', 'target': 'User avatar', 'text': 'I'}
+[2025-07-28 13:33:51] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "without storing graft open Notepad"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 13:37:36] [PARSE OK] {'action': 'type', 'target': 'document', 'text': 'I miss you my friend'}
+[2025-07-28 17:24:45] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "open Notepad"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 17:25:49] Raw LLM output:  {
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": "Notepad"
+  }
+}
+[2025-07-28 17:29:19] [PARSE OK] {'action': 'type', 'target': 'document', 'text': 'HDFC Bank'}
+[2025-07-28 17:31:45] [PARSE OK] {'action': 'click', 'target': 'Add New Tab'}
+[2025-07-28 17:34:29] [PARSE OK] {'action': 'click', 'target': 'HDFC Bank tab'}
+[2025-07-28 17:35:21] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "send mail to Prakhar"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 17:36:18] Raw LLM output:  {
+  "intent": "send_email",
+  "entities": {
+    "recipient": "Prakhar"
+  }
+}
+[2025-07-28 17:37:37] Prompt to LLM:
+[INST]
+
+You are an AI assistant. Your task is to classify the user's **intent** and extract any necessary **structured entities** from their command.
+
+Choose only ONE of the following four intents:
+
+1. "send_email" — for writing and sending an email.
+2. "web_search" — for searching online information through a search engine.
+3. "interact_with_app" — for interacting with a locally installed or native desktop/mobile application.
+4. "web_automation" — for navigating to or interacting with a specific website, especially when no known desktop app exists for the service mentioned.
+
+**Guidelines to disambiguate 'interact_with_app' vs 'web_automation':**
+
+- If the command refers to a known website or online service that typically lacks a standalone desktop app (e.g., most ecommerce, travel, streaming platforms), classify as "web_automation".
+- If the command refers to interacting with or opening a locally installed app (e.g., calculator, text editor, Zoom), classify as "interact_with_app".
+
+Respond **only in valid JSON** using the appropriate schema based on the intent.
+
+For "interact_with_app":
+{
+  "intent": "interact_with_app",
+  "entities": {
+    "app_name": ""
+  }
+}
+
+For "web_automation":
+{
+  "intent": "web_automation",
+  "entities": {
+    "website": ""
+  }
+}
+
+For "web_search":
+{
+  "intent": "web_search",
+  "entities": {
+    "query": ""
+  }
+}
+
+For "send_email":
+{
+  "intent": "send_email",
+  "entities": {
+    "recipient": "",
+    "subject": "",
+    "body": ""
+  }
+}
+
+Command: "send mail to Prakhar"
+
+Return only the JSON. Do not include any extra text or explanation.
+
+[/INST]
+[2025-07-28 17:37:46] Raw LLM output:  {
+  "intent": "send_email",
+  "entities": {
+    "recipient": "Prakhar"
+  }
+}

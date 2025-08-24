@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #045cff, #cd05ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rajdhani', sans-serif;
+  color: #ffffff;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.171);
+  border-radius: 20px;
+  box-shadow: 8px 8px 24px rgba(31, 3, 247, 0.527);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.mic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mic {
+  font-size: 4rem;
+  background: linear-gradient(to right, #c909e7, #daf109);
+  padding: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(99, 0, 219, 0.822);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.mic.listening {
+  animation: pulse 1s infinite;
+  box-shadow: 0 0 40px rgba(219, 193, 0, 0.9);
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(4, 0, 219, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgb(247, 247, 7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 179, 219, 0.5);
+  }
+}
+
+#response {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}

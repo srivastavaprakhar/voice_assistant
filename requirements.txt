@@ -1,0 +1,9 @@
+SpeechRecognition
+PyAudio                    # install with `pipwin install pyaudio` on Windows
+pyttsx3
+requests
+pywinauto                  # Windows‑only; remove for macOS/Linux demos
+llama-cpp-python
+fastapi
+uvicorn
+selenium
