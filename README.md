@@ -57,8 +57,3 @@ A Python voice assistant for Windows that uses speech recognition and AI to inte
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for suggestions or improvements.
-
-
-- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
-- [PyAutoGUI](https://pyautogui.readthedocs.io/)
-- [OpenAI](https://openai.com/)
